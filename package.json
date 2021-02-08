@@ -1,0 +1,98 @@
+{
+	"name": "multplefind",
+	"publisher": "tofumania",
+	"displayName": "MultipleFind",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:multiplefind.highlight1",
+		"onCommand:multiplefind.highlight2",
+		"onCommand:multiplefind.highlight3",
+		"onCommand:multiplefind.highlight4",
+		"onCommand:multiplefind.highlight5"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "multiplefind.highlight1",
+				"title": "Multiple Find Highlight1"
+			},
+			{
+				"command": "multiplefind.highlight2",
+				"title": "Multiple Find Highlight2"
+			},
+			{
+				"command": "multiplefind.highlight3",
+				"title": "Multiple Find Highlight3"
+			},
+			{
+				"command": "multiplefind.highlight4",
+				"title": "Multiple Find Highlight4"
+			},
+			{
+				"command": "multiplefind.highlight5",
+				"title": "Multiple Find Highlight5"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "multiplefind.highlight1",
+				"key": "ctrl+shift+1",
+				"mac": "cmd+shift+1",
+				"when": "editorHasSelection && editorTextFocus"
+			},
+			{
+				"command": "multiplefind.highlight2",
+				"key": "ctrl+shift+2",
+				"mac": "cmd+shift+2",
+				"when": "editorHasSelection && editorTextFocus"
+			},
+			{
+				"command": "multiplefind.highlight3",
+				"key": "ctrl+shift+3",
+				"mac": "cmd+shift+3",
+				"when": "editorHasSelection && editorTextFocus"
+			},
+			{
+				"command": "multiplefind.highlight4",
+				"key": "ctrl+shift+4",
+				"mac": "cmd+shift+4",
+				"when": "editorHasSelection && editorTextFocus"
+			},
+			{
+				"command": "multiplefind.highlight5",
+				"key": "ctrl+shift+5",
+				"mac": "cmd+shift+5",
+				"when": "editorHasSelection && editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	}
+}
